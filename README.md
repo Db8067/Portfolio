@@ -1,19 +1,49 @@
-# Devansh Bhardwaj - Portfolio
+# Devansh Bhardwaj — Portfolio
 
-A high-end, responsive portfolio built using Vanilla HTML, CSS, and JavaScript. 
-Features Glassmorphism UI and hardware-accelerated scroll animations using GSAP.
+A premium, editorial portfolio website built with **Next.js 14**, **TypeScript**, **Tailwind CSS**, **GSAP**, **Framer Motion**, and **Lenis** smooth scrolling.
 
-## Tech Stack
-* Vanilla HTML5 & CSS3
-* CSS Variables & Flexbox/Grid
-* Vanilla JavaScript (ES6)
-* GSAP (GreenSock Animation Platform) for high-end scrolling animations (React/Framer Motion alternative)
+---
 
-## Features
-* **Glassmorphism Design:** Frosted glass cards with blurred background imagery.
-* **Fully Responsive:** Adapts perfectly to mobile devices and tablets.
-* **Animated:** Smooth staggered entry animations and scroll-triggered reveals.
-* **Minimalist & Clean:** Ensures the content takes center stage.
+## ✦ Design Philosophy
+- **Editorial Art-Direction** — Bold typography, asymmetric layouts, strong visual hierarchy
+- **Orange-Accented Dark Palette** — Deep navy ambient background with a floating warm-white canvas
+- **Animation-Driven** — GSAP ScrollTrigger reveals, Framer Motion micro-interactions, cursor parallax
 
-## Usage
-Simply open `index.html` in any modern web browser to view the portfolio. No build step or backend required.
+## ✦ Sections
+1. **Hero** — Orange editorial hero with portrait & floating card
+2. **About** — Giant display typography statement
+3. **Stats** — Asymmetric achievement numbers
+4. **Selected Projects** — Editorial alternating layouts (Sponsora, Wantle, E-ResQ, etc.)
+5. **Services / What I Build** — Full Stack · AI/ML · Product · Community
+6. **Tech Stack** — Typography-driven, categorized
+7. **Experience** — NIC · Glocal View timeline
+8. **Mentoring** — Hackathon judge/mentor cards
+9. **Beyond Code** — Floating animated words (Music, Theatre, Photography…)
+10. **Currently Building** — Auto-scrolling marquee
+11. **Contact CTA** — Giant "Let's Build Something"
+12. **Footer** — Oversized brand name
+
+## ✦ Tech Stack
+- Next.js 14 (App Router)
+- TypeScript
+- Tailwind CSS
+- GSAP + ScrollTrigger
+- Framer Motion
+- Lenis Smooth Scroll
+
+## ✦ Getting Started
+```bash
+npm install
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000)
+
+## ✦ Build
+```bash
+npm run build
+npm start
+```
+
+## ✦ Deployment
+Optimized for **Vercel** deployment. Connect the GitHub repo and it deploys automatically.
