@@ -34,41 +34,16 @@ html {
 
 body {
     font-family: var(--font-body);
-    background-color: #050505; /* Fallback dark background */
+    background-color: #050505;
+    background-image: radial-gradient(circle at 50% 0%, #151515 0%, #050505 80%); /* Subtle global gradient */
     color: var(--text-light);
     line-height: 1.6;
     overflow-x: hidden;
 }
 
 /* =========================================
-   Background & Glassmorphism Utilities
+   Glassmorphism Utilities
 ========================================= */
-.background-wrapper {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
-    background-image: url('assets/images/hero-bg.png'); /* Dynamic Background */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    transform: scale(1.05); /* Slight scale to prevent edge bleeding on blur */
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* Dark gradient overlay to ensure text readability over the image */
-    background: linear-gradient(135deg, rgba(5,5,5,0.9) 0%, rgba(15,15,20,0.7) 100%);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-}
-
 .glass-card {
     background: var(--glass-bg);
     backdrop-filter: blur(var(--glass-blur));
@@ -78,6 +53,8 @@ body {
     box-shadow: var(--shadow);
     padding: 2.5rem;
     transition: var(--transition);
+    position: relative;
+    z-index: 2; /* Ensure glass cards are above backgrounds */
 }
 
 .glass-card:hover {
@@ -113,6 +90,8 @@ main {
 
 .section-padding {
     padding: 100px 0;
+    position: relative;
+    z-index: 2;
 }
 
 .section-header {
@@ -152,6 +131,8 @@ a {
     transition: var(--transition);
     cursor: pointer;
     text-align: center;
+    position: relative;
+    z-index: 5;
 }
 
 .primary-btn {
@@ -242,11 +223,27 @@ a {
    Hero Section
 ========================================= */
 .hero {
+    position: relative;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     padding-top: 80px; /* Offset for nav */
+    
+    /* Landing page specific background */
+    background-image: url('assets/images/hero-new-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Dark overlay strictly for the hero section to make text readable */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(5, 5, 10, 0.75); /* Heavy dark overlay */
+    z-index: 1;
 }
 
 .hero-content {
@@ -255,6 +252,7 @@ a {
     width: 100%;
     padding: 4rem 2rem;
     position: relative;
+    z-index: 5; /* Ensure content is above the overlay */
     overflow: hidden;
 }
 

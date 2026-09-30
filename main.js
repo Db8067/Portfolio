@@ -48,35 +48,45 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial Load Animations for Hero Section
     const tl = gsap.timeline();
 
-    tl.from('.glass-nav', {
-        y: -100,
-        opacity: 0,
-        duration: 0.8,
-        ease: 'power3.out'
-    })
-    .from('.hero-content', {
-        y: 50,
-        opacity: 0,
-        duration: 1,
-        ease: 'power3.out'
-    }, "-=0.4")
-    .from('.greeting', { opacity: 0, y: 20, duration: 0.5 }, "-=0.6")
-    .from('.name', { opacity: 0, y: 20, duration: 0.5 }, "-=0.4")
-    .from('.role', { opacity: 0, y: 20, duration: 0.5 }, "-=0.4")
-    .from('.tagline', { opacity: 0, y: 20, duration: 0.5 }, "-=0.4")
-    .from('.hero-cta .btn', { 
-        opacity: 0, 
-        y: 20, 
-        stagger: 0.1, 
-        duration: 0.5 
-    }, "-=0.4")
-    .from('.social-links a', { 
-        opacity: 0, 
-        scale: 0, 
-        stagger: 0.1, 
-        duration: 0.4, 
-        ease: 'back.out(1.7)' 
-    }, "-=0.4");
+    tl.fromTo('.glass-nav', 
+        { y: -100, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' }
+    )
+    .fromTo('.hero-content', 
+        { y: 50, opacity: 0 },
+        { y: 0, opacity: 1, duration: 1, ease: 'power3.out' }, 
+        "-=0.4"
+    )
+    .fromTo('.greeting', 
+        { opacity: 0, y: 20 }, 
+        { opacity: 1, y: 0, duration: 0.5 }, 
+        "-=0.6"
+    )
+    .fromTo('.name', 
+        { opacity: 0, y: 20 }, 
+        { opacity: 1, y: 0, duration: 0.5 }, 
+        "-=0.4"
+    )
+    .fromTo('.role', 
+        { opacity: 0, y: 20 }, 
+        { opacity: 1, y: 0, duration: 0.5 }, 
+        "-=0.4"
+    )
+    .fromTo('.tagline', 
+        { opacity: 0, y: 20 }, 
+        { opacity: 1, y: 0, duration: 0.5 }, 
+        "-=0.4"
+    )
+    .fromTo('.hero-cta .btn', 
+        { opacity: 0, y: 20 }, 
+        { opacity: 1, y: 0, stagger: 0.1, duration: 0.5 }, 
+        "-=0.4"
+    )
+    .fromTo('.social-links a', 
+        { opacity: 0, scale: 0 }, 
+        { opacity: 1, scale: 1, stagger: 0.1, duration: 0.4, ease: 'back.out(1.7)' }, 
+        "-=0.4"
+    );
 
     // Scroll Animations for all sections
     const scrollElements = document.querySelectorAll('.scroll-anim');
