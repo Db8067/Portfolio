@@ -37,14 +37,14 @@ export default function BeyondCode() {
           More Than<br />Just Code.
         </h2>
 
-        <div className="relative h-[40vh] md:h-[50vh] w-full max-w-4xl mx-auto">
-          <span className="floating-word absolute top-0 left-10 text-4xl md:text-6xl font-display font-bold uppercase">Music</span>
-          <span className="floating-word absolute top-1/4 right-10 text-3xl md:text-5xl font-display font-bold uppercase opacity-80">Theatre</span>
-          <span className="floating-word absolute top-1/2 left-20 text-5xl md:text-7xl font-display font-bold uppercase opacity-90">Community</span>
-          <span className="floating-word absolute bottom-1/4 right-20 text-4xl md:text-6xl font-display font-bold uppercase">Photography</span>
-          <span className="floating-word absolute bottom-0 left-1/4 text-3xl md:text-5xl font-display font-bold uppercase opacity-70">Badminton</span>
-          <span className="floating-word absolute top-1/3 left-1/2 -translate-x-1/2 text-2xl md:text-4xl font-display font-bold uppercase opacity-60">Beatboxing</span>
-          <span className="floating-word absolute bottom-10 right-1/3 text-4xl md:text-7xl font-display font-bold uppercase opacity-90 text-stroke">Band Ibadat</span>
+        <div className="relative h-[26rem] md:h-[50vh] w-full max-w-4xl mx-auto">
+          <span className="floating-word absolute top-0 left-0 text-3xl md:left-10 md:text-6xl font-display font-bold uppercase">Music</span>
+          <span className="floating-word absolute top-[18%] right-0 text-2xl md:top-1/4 md:right-10 md:text-5xl font-display font-bold uppercase opacity-80">Theatre</span>
+          <span className="floating-word absolute top-[40%] left-0 text-4xl md:top-1/2 md:left-20 md:text-7xl font-display font-bold uppercase opacity-90">Community</span>
+          <span className="floating-word absolute bottom-[26%] right-0 text-3xl md:bottom-1/4 md:right-20 md:text-6xl font-display font-bold uppercase">Photography</span>
+          <span className="floating-word absolute bottom-0 left-0 text-2xl md:left-1/4 md:text-5xl font-display font-bold uppercase opacity-70">Badminton</span>
+          <span className="floating-word absolute top-[28%] right-0 text-xl md:top-1/3 md:right-auto md:left-1/2 md:-translate-x-1/2 md:text-4xl font-display font-bold uppercase opacity-60">Beatboxing</span>
+          <span className="floating-word absolute bottom-[12%] left-0 text-2xl md:bottom-10 md:left-auto md:right-1/3 md:text-7xl font-display font-bold uppercase opacity-90 text-stroke">Band Ibadat</span>
         </div>
 
       </div>

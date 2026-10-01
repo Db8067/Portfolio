@@ -57,7 +57,7 @@ export default function Hero() {
         BUILDER
       </h1>
 
-      <div className="container relative z-10 mx-auto px-6 md:px-10 h-full flex flex-col md:flex-row items-center justify-between mt-10 md:mt-0 gap-10">
+      <div className="container relative z-10 mx-auto px-6 md:px-10 h-full flex flex-col md:flex-row items-center justify-between mt-10 md:mt-0 gap-12 md:gap-10">
         
         {/* Left Content */}
         <div className="flex-1 text-white">
@@ -70,25 +70,26 @@ export default function Hero() {
         </div>
 
         {/* Right Portrait & Card */}
-        <div className="flex-1 relative w-full h-[50vh] md:h-[70vh] flex items-end justify-center md:justify-end">
-          <div className="hero-element relative w-[80%] h-full">
+        <div className="flex-1 relative w-full flex flex-col items-center gap-6 md:block md:h-[70vh]">
+          <div className="hero-element relative h-[28rem] w-full max-w-sm md:h-full md:w-[80%] md:max-w-none overflow-hidden">
             {/* The portrait should ideally have a transparent background or be creatively masked. For now, object-cover masking. */}
             <Image 
-              src="/profile.jpg" 
+              src="/devansh-speaking.jpeg"
               alt="Devansh Bhardwaj" 
               fill 
-              className="object-cover object-top filter contrast-125 saturate-50 mix-blend-luminosity hover:mix-blend-normal transition-all duration-700" 
+              className="object-cover filter contrast-125 saturate-50 mix-blend-luminosity hover:mix-blend-normal transition-all duration-700 scale-125 md:scale-[1.3]"
+              style={{ objectPosition: "50% 18%" }}
             />
           </div>
 
           {/* Floating Card */}
           <div 
             ref={cardRef}
-            className="hero-element absolute bottom-10 -left-4 md:-left-10 bg-canvas text-text-main p-6 shadow-2xl w-64 border border-black/5"
+            className="hero-element relative w-full max-w-sm bg-canvas text-text-main p-6 shadow-2xl border border-black/5 md:absolute md:bottom-10 md:-left-10 md:w-64 md:max-w-none"
           >
             <div className="flex items-center gap-4 mb-4">
               <div className="w-12 h-12 rounded-full overflow-hidden relative grayscale">
-                <Image src="/profile.jpg" alt="Devansh" fill className="object-cover" />
+                <Image src="/devansh-speaking.jpeg" alt="Devansh" fill className="object-cover scale-150" style={{ objectPosition: "50% 18%" }} />
               </div>
               <div>
                 <h4 className="font-display font-bold text-sm leading-tight">DEVANSH BHARDWAJ</h4>

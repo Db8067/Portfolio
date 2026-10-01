@@ -15,7 +15,9 @@ const projects = [
     desc: "A platform designed to simplify sponsorship discovery and management for hackathons and events, connecting organizers, sponsors and communities.",
     align: "left", // Image on left
     color: "bg-[#F4F4F4]",
-    image: "/banner.png" // using existing assets
+    image: "/sponsora.jpg",
+    imageClass: "object-contain p-6",
+    href: "https://www.intersponsora.space/"
   },
   {
     num: "02",
@@ -26,7 +28,7 @@ const projects = [
     align: "right",
     color: "bg-[#111111]",
     textColor: "text-white",
-    image: "/hero-bg.png"
+    image: "/wantle-india.jpg"
   },
   {
     num: "03",
@@ -93,14 +95,14 @@ export default function Projects() {
               className={`project-card flex flex-col ${
                 proj.align === 'full' ? '' : 
                 proj.align === 'right' ? 'md:flex-row-reverse' : 'md:flex-row'
-              } gap-10 md:gap-16 group hover-trigger cursor-none`}
+              } gap-10 md:gap-16 group hover-trigger md:cursor-none`}
               data-cursor-text="VIEW"
             >
               
               {/* Image Block */}
               <div 
                 className={`relative overflow-hidden ${
-                  proj.align === 'full' ? 'w-full h-[50vh] md:h-[70vh]' : 'w-full md:w-[65%] h-[40vh] md:h-[60vh]'
+                  proj.align === 'full' ? 'w-full aspect-[4/3] md:aspect-auto md:h-[70vh]' : 'w-full aspect-[4/3] md:w-[65%] md:aspect-auto md:h-[60vh]'
                 } ${proj.color} flex items-center justify-center`}
               >
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
@@ -108,7 +110,7 @@ export default function Projects() {
                   src={proj.image} 
                   alt={proj.name} 
                   fill
-                  className="object-cover group-hover:scale-[1.03] transition-transform duration-700 ease-out grayscale group-hover:grayscale-0"
+                  className={`${proj.imageClass ?? "object-cover"} group-hover:scale-[1.03] transition-transform duration-700 ease-out grayscale group-hover:grayscale-0`}
                 />
               </div>
 
@@ -128,10 +130,22 @@ export default function Projects() {
                   {proj.desc}
                 </p>
 
-                <div className="mt-auto flex items-center gap-2 font-bold text-sm tracking-widest uppercase opacity-60 group-hover:opacity-100 group-hover:text-primary transition-all duration-300">
-                  <span>View Project</span>
-                  <ArrowUpRight size={18} className="transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                </div>
+                {proj.href ? (
+                  <a
+                    href={proj.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-auto flex w-fit items-center gap-2 font-bold text-sm tracking-widest uppercase opacity-60 group-hover:opacity-100 group-hover:text-primary transition-all duration-300"
+                  >
+                    <span>View Project</span>
+                    <ArrowUpRight size={18} className="transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                  </a>
+                ) : (
+                  <div className="mt-auto flex items-center gap-2 font-bold text-sm tracking-widest uppercase opacity-60 group-hover:opacity-100 group-hover:text-primary transition-all duration-300">
+                    <span>View Project</span>
+                    <ArrowUpRight size={18} className="transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                  </div>
+                )}
               </div>
             </div>
           ))}

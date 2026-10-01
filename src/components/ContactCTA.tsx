@@ -25,7 +25,7 @@ export default function ContactCTA() {
         <div className="cta-content flex flex-col md:flex-row items-start md:items-end justify-between gap-10">
           
           <div>
-            <h2 className="font-display text-6xl md:text-9xl font-bold uppercase tracking-tighter leading-[0.85] mb-6">
+            <h2 className="font-display text-5xl sm:text-6xl md:text-9xl font-bold uppercase tracking-tighter leading-[0.85] mb-6">
               Let&apos;s<br />Build<br />Something.
             </h2>
             <p className="text-xl md:text-2xl font-medium text-text-muted max-w-md">

@@ -32,7 +32,7 @@ export default function Navbar() {
         }`}
       >
         <div className="container mx-auto px-6 md:px-10 flex justify-between items-center">
-          <div className="font-display font-bold text-xl tracking-tighter">
+          <div className="font-display font-bold text-base min-[360px]:text-xl tracking-tighter whitespace-nowrap">
             DEVANSH BHARDWAJ<span className="text-primary">®</span>
           </div>
 
