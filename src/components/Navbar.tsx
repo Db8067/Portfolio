@@ -33,7 +33,7 @@ export default function Navbar() {
       >
         <div className="container mx-auto px-6 md:px-10 flex justify-between items-center">
           <div className="font-display font-bold text-xl tracking-tighter">
-            DEVANSH<span className="text-primary">®</span>
+            DEVANSH BHARDWAJ<span className="text-primary">®</span>
           </div>
 
           {/* Desktop Nav */}

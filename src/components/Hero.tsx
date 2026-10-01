@@ -61,9 +61,6 @@ export default function Hero() {
         
         {/* Left Content */}
         <div className="flex-1 text-white">
-          <p className="hero-element font-bold tracking-widest text-xs mb-6 opacity-80">
-            © 2026 // PORTFOLIO
-          </p>
           <h2 className="hero-element font-display text-5xl md:text-7xl lg:text-8xl font-bold uppercase tracking-tighter leading-[0.9]">
             Building<br />Digital<br />Products
           </h2>
